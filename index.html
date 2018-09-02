@@ -8,11 +8,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-    <button data-emotions="hell yeah!">heck yeah!</button>
-    <button data-emotions="grumpy">grumpy</button>
-    <button data-emotions="joy">joy!</button>
-    <button data-emotions="competitive">competitive</button>
-    <div id="gif-here">
+    <div class="container">
+        <div id="gif-here"></div>
+        <div id="buttons-view"></div>
+        <br>
+    <form id="input-form">
+        <label for="emotion-input">I'm feeling:</label>
+        <input type="text" id="feeling-input">
+        <br>
+        <input id="add-feeling" type="submit" value="GO!">
+    </form>
     </div>
     <script src="gif.js"></script>
 </body>
