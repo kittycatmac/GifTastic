@@ -55,18 +55,61 @@
 
     $(document).on ("click", ".feeling-btn", searchGif);
     renderButtons();
+    $('*gif-here').gifplayer();
+    /*jQuery("#gif-here").after( function() {
 
-    $(".feelItem").on("click", function() {
+        // keep ref to the image
+          var image = this;
+      
+          // add div container for the link
+          var $d = jQuery("<div />");
+          var $d = $(".feelItem");
+      
+          // add link
+          var $a = jQuery("<a>Start / Stop animation</a>");
+          $d.append($a);
+      
+          // add click event
+          $a.on("click", function() { 
+      
+              // get the src of the image
+              var src = jQuery(image).attr("src");
+      
+              // change the image
+              if(jQuery(src.split("_")).last()[0] == "still.gif")
+                  jQuery(image).attr('src', src.replace('_still.gif', '.gif'));
+              else
+                  jQuery(image).attr('src', src.replace('.gif', '_still.gif'));
+              
+          })
+          return $d;
+      
+      });
+
+    /*$(".feelItem").on("click", function() {
         // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
-        var state = $(this).attr("data-state");
+        /*var state = $(this).attr("data-state");
         // If the clicked image's state is still, update its src attribute to what its data-animate value is.
         // Then, set the image's data-state to animate
         // Else set src to the data-still value
         if (state === "still") {
-          $(this).attr("src", $(this).attr("data-animate"));
+          $(this).attr("src", $(this).attr(fixed_height));
           $(this).attr("data-state", "animate");
         } else {
-          $(this).attr("src", $(this).attr("data-still"));
+          $(this).attr("src", $(this).attr(fixed_height_still));
           $(this).attr("data-state", "still");
+          }
+        });*/
+        /*var still = ;
+        var animate = $("<img>").attr("src", results[i].images.fixed_height.url);
+        if (emotionalImage === still) {
+            $(this).attr("src", $(this).attr(animate));
+        } else {
+            $(this).attr("src", $(this).attr(still));
         }
-      });
+        console.log(this);*/
+    /*});
+    /*imgOn = gifNew;
+    imgOff = gifNew;
+    imgOn.src = "anim.gif";
+    imgOff.src = "still.gif";*/

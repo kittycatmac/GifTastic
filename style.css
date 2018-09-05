@@ -1,0 +1,38 @@
+body {
+    background-color: rgba(188, 240, 188, 0.774);
+}
+.container {
+    box-sizing: border-box;
+}
+
+#buttons-view {
+    width: 100%;
+    background-color: peru;
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+form {
+    width: 30%;
+    float: right;
+    font-size: 30px;
+}
+
+#gif-here {
+    width:70%;
+    float: left;
+}
+
+#add-feeling {
+    background-color: peru;
+    color: white;
+}
