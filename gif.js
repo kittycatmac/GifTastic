@@ -56,19 +56,18 @@
     $(document).on ("click", ".feeling-btn", searchGif);
     renderButtons();
 
-    
 	//This funciton allows the user to play and stop each gif on user click
-	$("body").on("click", ".feelItem", function() {
+	/*$("body").on("click", ".feelItem", function() {
 		var src = $(this).attr("src");
 
 		if($(this).hasClass("play")){
 			//Stop the gif animation
-			$(this).attr("src", src.replace(/\.gif/i, "_s.gif"));
+			$(this).attr("src", src.replace(images.fixed_height.url, "images.fixed_height_still.url"));
 			$(this).removeClass("play");
 		} else {
 			//Play the gif animation
 			$(this).addClass("play");
-			$(this).attr("src", src.replace(/\_s.gif/i, ".gif"));
+			$(this).attr("src", src.replace(images.fixed_height_still.url, "images.fixed_height.url"));
 		}
 
     });    
