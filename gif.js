@@ -23,7 +23,7 @@
                     //new P tag with result item rating
                     var p = $("<p>").text("Rating: " + rating);
                     //create image tag and adding a source attr of property from the result item
-                    var emotionalImage = $("<img>").attr("src", results[i].images.fixed_height.url);
+                    var emotionalImage = $("<img class='gif'>").attr("src", results[i].images.fixed_height.url);
                      //adding to gifNew 
                     gifNew.append(p);
                     gifNew.append(emotionalImage);
@@ -55,7 +55,24 @@
 
     $(document).on ("click", ".feeling-btn", searchGif);
     renderButtons();
-    $('*gif-here').gifplayer();
+
+    
+	//This funciton allows the user to play and stop each gif on user click
+	$("body").on("click", ".feelItem", function() {
+		var src = $(this).attr("src");
+
+		if($(this).hasClass("play")){
+			//Stop the gif animation
+			$(this).attr("src", src.replace(/\.gif/i, "_s.gif"));
+			$(this).removeClass("play");
+		} else {
+			//Play the gif animation
+			$(this).addClass("play");
+			$(this).attr("src", src.replace(/\_s.gif/i, ".gif"));
+		}
+
+    });    
+    //$('.gif').gifplayer();
     /*jQuery("#gif-here").after( function() {
 
         // keep ref to the image
